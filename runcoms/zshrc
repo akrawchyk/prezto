@@ -12,3 +12,23 @@ fi
 
 # Customize to your needs...
 
+# Base16 Shell
+BASE16_SCHEME="tomorrow"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# chruby
+CHRUBY_SCRIPT="/usr/local/share/chruby/chruby.sh"
+[[ -s $CHRUBY_SCRIPT ]] && source $CHRUBY_SCRIPT
+chruby ruby-2
+
+# aliases
+ALIASES_FILE="$HOME/.aliases"
+[[ -s  $ALIASES_FILE ]] && source $ALIASES_FILE
+
+# functions
+FUNCTIONS_FILE="$HOME/.functions"
+[[ -s  $FUNCTIONS_FILE ]] && source $FUNCTIONS_FILE
+
+
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
