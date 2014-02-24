@@ -36,6 +36,12 @@ fi
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
+# Set the list of directories that compeletion searches.
+fpath=(
+  $HOME/bin/wd
+  $fpath
+)
+
 # Set the the list of directories that cd searches.
 cdpath=(
   ~
