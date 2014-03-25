@@ -13,9 +13,9 @@ fi
 # Customize to your needs...
 
 # Base16 Shell
-BASE16_SCHEME="tomorrow"
-BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+# BASE16_SCHEME="eighties"
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 
 # chruby
@@ -36,6 +36,6 @@ ALIASES_FILE="$HOME/.aliases"
 FUNCTIONS_FILE="$HOME/.functions"
 [[ -s  $FUNCTIONS_FILE ]] && source $FUNCTIONS_FILE
 
-
 # exports
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export NODE_PATH="/usr/local/lib/jsctags:${NODE_PATH}"

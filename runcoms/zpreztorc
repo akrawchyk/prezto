@@ -23,6 +23,7 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
+  # 'syntax-highlighting' \
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -33,8 +34,8 @@ zstyle ':prezto:load' pmodule \
   'gnu-utility' \
   'utility' \
   'completion' \
-  'prompt' \
   'history-substring-search' \
+  'prompt' \
   'archive' \
   'osx' \
   'homebrew' \
@@ -71,6 +72,9 @@ zstyle ':prezto:module:gnu-utility' prefix 'g'
 #
 # History Substring Search
 #
+
+# Disable color
+zstyle ':prezto:module:history-substring-search' color 'no'
 
 # Set the query found color.
 # zstyle ':prezto:module:history-substring-search:color' found ''
