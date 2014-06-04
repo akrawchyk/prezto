@@ -39,6 +39,7 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'osx' \
   'homebrew' \
+  'node' \
   'git' \
   'tmux'
 
