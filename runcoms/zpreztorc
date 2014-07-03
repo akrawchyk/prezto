@@ -36,12 +36,15 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'history-substring-search' \
   'prompt' \
+  'fasd' \
   'archive' \
+  'git' \
   'osx' \
   'homebrew' \
   'node' \
-  'git' \
-  'tmux'
+  'python' \
+  'tmux' \
+  'rsync'
 
 #
 # Editor

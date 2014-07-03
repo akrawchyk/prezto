@@ -12,29 +12,21 @@ fi
 
 # Customize to your needs...
 
-# Base16 Shell
-# BASE16_SCHEME="eighties"
-# BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
+# virtualenvwrapper
+[[ -z $VIRTUAL_ENV ]] && workon default
 
 # chruby
 CHRUBY_SCRIPT="/usr/local/share/chruby/chruby.sh"
-[[ -f $CHRUBY_SCRIPT ]] && source $CHRUBY_SCRIPT
-chruby ruby-2
+if [[ -f $CHRUBY_SCRIPT ]]; then
+	source $CHRUBY_SCRIPT
+	chruby ruby-2
 
-# virtualenvwrapper
-VIRTUALENVWRAPPER_SCRIPT="$(brew --prefix)/bin/virtualenvwrapper.sh"
-if [[ -f $VIRTUALENVWRAPPER_SCRIPT ]]; then
-  source $VIRTUALENVWRAPPER_SCRIPT
-  export WORKON_HOME=$HOME/.virtualenvs
-  if [[ -z $VIRTUAL_ENV ]] && workon default
+	# add local bin for binstubs
+	path=(
+		./bin
+		$path
+	)
 fi
-
-# z
-Z_SCRIPT="$(brew --prefix)/etc/profile.d/z.sh"
-[[ -f $Z_SCRIPT ]] && source $Z_SCRIPT
-
 
 # aliases
 ALIASES_FILE="$HOME/.aliases"
@@ -43,7 +35,3 @@ ALIASES_FILE="$HOME/.aliases"
 # functions
 FUNCTIONS_FILE="$HOME/.functions"
 [[ -f  $FUNCTIONS_FILE ]] && source $FUNCTIONS_FILE
-
-# exports
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
-export NODE_PATH="/usr/local/lib/node_modules:/usr/local/lib/jsctags:${NODE_PATH}"

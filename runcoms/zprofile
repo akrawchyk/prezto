@@ -38,7 +38,6 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that compeletion searches.
 fpath=(
-  $HOME/bin/wd
   $fpath
 )
 
@@ -51,6 +50,7 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ./bin
   /usr/local/{bin,sbin}
   $path
 )

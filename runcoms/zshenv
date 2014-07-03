@@ -9,3 +9,9 @@
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+
+# exports
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export PROJECT_HOME="$HOME/Projects"
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
