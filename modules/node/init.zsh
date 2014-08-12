@@ -7,8 +7,8 @@
 #
 
 # Load NVM into the shell session.
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-  source "$HOME/.nvm/nvm.sh"
+if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
+  source "$(brew --prefix nvm)/nvm.sh"
 fi
 
 # Return if requirements are not found.

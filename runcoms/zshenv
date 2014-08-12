@@ -12,6 +12,7 @@ fi
 
 
 # exports
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export NVM_DIR=$HOME/.nvm
 export PROJECT_HOME="$HOME/Projects"
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'

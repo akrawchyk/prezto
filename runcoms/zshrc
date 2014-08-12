@@ -12,11 +12,18 @@ fi
 
 # Customize to your needs...
 
+# nvm
+NVM_SCRIPT="$(brew --prefix nvm)/nvm.sh"
+if [[ -f $NVM_SCRIPT ]]; then
+	source $NVM_SCRIPT
+fi
+
 # virtualenvwrapper
 [[ -z $VIRTUAL_ENV ]] && workon default
 
 # chruby
-CHRUBY_SCRIPT="/usr/local/share/chruby/chruby.sh"
+# Must come after virtualenvwrapper so we can prepend .bin to our path
+CHRUBY_SCRIPT="$(brew --prefix chruby)/share/chruby/chruby.sh"
 if [[ -f $CHRUBY_SCRIPT ]]; then
 	source $CHRUBY_SCRIPT
 	chruby ruby-2
