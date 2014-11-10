@@ -12,6 +12,10 @@ fi
 
 # Customize to your needs...
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
+[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+
 # nvm
 NVM_SCRIPT="$(brew --prefix nvm)/nvm.sh"
 if [[ -f $NVM_SCRIPT ]]; then
