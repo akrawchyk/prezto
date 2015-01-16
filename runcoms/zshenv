@@ -22,10 +22,10 @@ export NVM_DIR="$HOME/.nvm"
 # Python
 export PYENV_ROOT="$HOME/.pyenv"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-export PROJECT_HOME="$HOME/Projects"
+export PROJECT_HOME="$HOME/Developer"
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 
 
 # Vagrant
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
-export VAGRANT_CWD=$HOME/Projects/isl-cloud
+export VAGRANT_CWD=$HOME/Developer/isl-cloud

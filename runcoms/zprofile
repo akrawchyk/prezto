@@ -38,13 +38,15 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
 cdpath=(
-  $HOME/Projects
+  $HOME/Developer
   $cdpath
 )
 
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  /usr/{bin,sbin}
+  /{bin,sbin}
   $path
 )
 

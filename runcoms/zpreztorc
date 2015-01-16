@@ -33,16 +33,16 @@ zstyle ':prezto:load' pmodule \
   'gnu-utility' \
   'utility' \
   'completion' \
-  'archive' \
-  'fasd' \
   'git' \
-  'history-substring-search' \
+  'archive' \
+  'osx' \
+  'fasd' \
   'homebrew' \
   'node' \
-  'osx' \
   'python' \
   'ruby' \
   'tmux' \
+  'history-substring-search' \
   'prompt'
 
 #
