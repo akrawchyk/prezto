@@ -10,6 +10,13 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# Android SDK
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+
+# Homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
 
 # Node
 export NVM_DIR="$HOME/.nvm"
@@ -21,9 +28,4 @@ export DISABLE_NOTIFIER=true
 
 # Python
 export PROJECT_HOME="$HOME/Developer"
-export VIRTUAL_ENV_DISABLE_PROMPT=0
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-
-
-# Vagrant
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion

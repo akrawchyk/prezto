@@ -21,3 +21,10 @@ ALIASES_FILE="$HOME/.aliases"
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+
+# Virtualenvwrapper
+# FIXME remove when prezto python module works
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Developer
+source /usr/local/bin/virtualenvwrapper.sh
