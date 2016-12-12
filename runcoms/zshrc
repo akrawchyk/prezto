@@ -18,9 +18,14 @@ ALIASES_FILE="$HOME/.aliases"
 [[ -s $ALIASES_FILE ]] && source $ALIASES_FILE
 
 
+# Functions
+ALIASES_FILE="$HOME/.functions"
+[[ -s $ALIASES_FILE ]] && source $ALIASES_FILE
+
+
 # Base16 Shell for 256 colors
-BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-eighties.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 
 # Call `nvm use` automatically when entering a dir with .nvmrc
