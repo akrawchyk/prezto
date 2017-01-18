@@ -14,14 +14,13 @@ fi
 
 
 # Aliases
-ALIASES_FILE="$HOME/.aliases"
-[[ -s $ALIASES_FILE ]] && source $ALIASES_FILE
-
+[[ -s $HOME/.aliases ]] && source $HOME/.aliases
 
 # Functions
-ALIASES_FILE="$HOME/.functions"
-[[ -s $ALIASES_FILE ]] && source $ALIASES_FILE
+[[ -s $HOME/.functions ]] && source $HOME/.functions
 
+# Rust Cargo
+[[ -s $HOME/.cargo/env ]] && source $HOME/.cargo/env
 
 # Base16 Shell for 256 colors
 BASE16_SHELL=$HOME/.config/base16-shell/
